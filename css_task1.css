@@ -1,0 +1,19 @@
+div > table{
+    background-color: #7fd1d1;
+    border-radius: 10px;
+}
+.table th,td{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.table2 td{
+    border: 2px solid;
+    border-color:rgb(151, 207, 68);
+    height: 35px;
+    width: 60px;
+}
+#box{
+    border-radius: 2px;
+    border-top-right-radius: 13px;
+    border-bottom-left-radius: 13px;
+}
