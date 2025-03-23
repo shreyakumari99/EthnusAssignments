@@ -3,144 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHREYA KUMARI</title>
+    <title>ETHNUS MERN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* Global Styles */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+        :root {
+            --primary-color: #00ADB5;
+            --secondary-color: #222831;
+            --background: #393E46;
+            --text-light: #EEEEEE;
+            --text-dark: #FFFFFF;
+            --card-bg: rgba(0, 0, 0, 0.2);
+        }
+
+        * {
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            box-sizing: border-box;
         }
 
-        /* Container */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--background);
+            color: var(--text-light);
+            padding: 2rem;
+        }
+
         .container {
-            width: 50%;
-            background: white;
-            padding: 25px;
+            background: var(--secondary-color);
+            padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            max-width: 850px;
+            margin: 2rem auto;
+            transition: all 0.3s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+        }
+
+        .profile-section {
             text-align: center;
-            animation: fadeIn 1s ease-in-out;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--primary-color);
         }
 
-        /* Header */
-        h2 {
-            color: #2c3e50;
-            font-size: 24px;
+        .profile-section h2 {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin: 0.5rem 0;
         }
 
-        .info p {
-            font-size: 16px;
-            font-weight: 500;
-            color: #555;
-            margin: 5px 0;
+        .main-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin: 2rem 0;
+            text-align: center;
+            position: relative;
         }
 
-        /* Index Header */
-        .index-header {
-            font-size: 26px;
-            font-weight: bold;
-            color: white;
-            background: linear-gradient(45deg, #3498db, #6c5ce7);
-            padding: 12px;
-            border-radius: 8px;
-            margin: 20px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        .main-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 5px;
         }
 
-        /* Table */
         table {
             width: 100%;
             border-collapse: collapse;
+            margin-top: 2rem;
             border-radius: 10px;
             overflow: hidden;
-            margin-top: 15px;
         }
 
         th, td {
-            padding: 12px;
+            padding: 1rem;
             text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         th {
-            background: #6c5ce7;
-            color: white;
-            font-size: 18px;
+            background: var(--primary-color);
+            color: var(--text-dark);
+            font-weight: 600;
         }
 
-        tr:nth-child(even) {
-            background: #f4f4f4;
+        td {
+            background: var(--card-bg);
+            transition: all 0.3s ease;
         }
 
-        tr:hover {
-            background: rgba(108, 92, 231, 0.1);
+        tr:nth-child(even) td {
+            background: rgba(255, 255, 255, 0.1);
         }
 
-        /* Links */
+        tr:hover td {
+            background: var(--primary-color);
+            color: var(--text-dark);
+        }
+
+        .section-header {
+            background: var(--primary-color) !important;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
         a {
+            color: var(--primary-color);
             text-decoration: none;
-            color: white;
-            font-weight: bold;
-            background: linear-gradient(45deg, #3498db, #6c5ce7);
-            padding: 8px 14px;
-            border-radius: 5px;
-            transition: 0.3s;
+            font-weight: 500;
             display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            background: rgba(0, 173, 181, 0.2);
+            transition: all 0.3s ease;
         }
 
         a:hover {
-            background: linear-gradient(45deg, #6c5ce7, #3498db);
-            transform: scale(1.05);
-        }
-
-        /* Fade In Animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            background: var(--primary-color);
+            color: var(--text-dark);
+            box-shadow: 0 5px 15px rgba(0, 173, 181, 0.5);
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
+    <div class="container profile-section">
+        <h2>Name: Shreya Kumari</h2>
+        <h2>Registration No: 22BSA10289</h2>
+        <h2>Email: shreyakumari.2022@vitbhopal.ac.in</h2>
+    </div>
+    
     <div class="container">
-        <h2>MERN INTERNSHIP ASSIGNMENT 1</h2>
-        <div class="info">
-            <p><strong>Name:</strong> Shreya Kumari</p> 
-            <p><strong>Reg No:</strong> 22BSA10289</p> 
-            <p><strong>Email:</strong> shreyakumari.2022@vitbhopal.ac.in</p>
-        </div>
+        <h1 class="main-title">Course Tasks Index</h1>
+        <table>
+            <tr><th colspan="2" class="section-header">HTML Tasks</th></tr>
+            <tr><td>Task-1</td><td><a href="html_task1.html" target="_blank">View Task</a></td></tr>
+            
+            <tr><th colspan="2" class="section-header">CSS Tasks</th></tr>
+            <tr><td>Task-1</td><td><a href="css_task1.html" target="_blank">View Task</a></td></tr>
 
-        <div class="index-header">Index Page</div>
-
-        <table border="0">
-            <tr>
-                <th>Task Name</th>
-                <th>Link</th>
-            </tr>
-            <tr>
-                <td>HTML Task-1</td>
-                <td><a href="html_task1.html" target="_blank">Open</a></td>
-            </tr>
-            <tr>
-                <td>CSS Task-1</td>
-                <td><a href="css_task1.html" target="_blank">Open</a></td>
-            </tr>
-            <tr>
-                <td>Bootstrap Task-1</td>
-                <td><a href="bootstrap_task1.html" target="_blank">Open</a></td>
-            </tr>
+            <tr><th colspan="2" class="section-header">Bootstrap Tasks</th></tr>
+            <tr><td>Task-1</td><td><a href="bootstrap_task1.html" target="_blank">View Task</a></td></tr>
+            
+            <tr><th colspan="2" class="section-header">JavaScript Tasks</th></tr>
+            <tr><td>Task-1</td><td><a href="js_task1.html" target="_blank">View Task</a></td></tr>
+            <tr><td>Task-2</td><td><a href="js_task2.html" target="_blank">View Task</a></td></tr>
+            <tr><td>Task-3</td><td><a href="js_task3.html" target="_blank">View Task</a></td></tr>
+            <tr><td>Task-4</td><td><a href="js_task4.html" target="_blank">View Task</a></td></tr>
+            <tr><td>Task-5</td><td><a href="js_task5.html" target="_blank">View Task</a></td></tr>
+            <tr><td>Task-6</td><td><a href="js_task6.html" target="_blank">View Task</a></td></tr>
+            <tr><td>Task-7</td><td><a href="js_task7.html" target="_blank">View Task</a></td></tr>
+            <tr><td>Task-8</td><td><a href="js_task8.html" target="_blank">View Task</a></td></tr>
+            <tr><td>Task-9</td><td><a href="js_task9.html" target="_blank">View Task</a></td></tr>
         </table>
     </div>
 </body>
 </html>
-
